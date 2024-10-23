@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-import { getIpInfo, IpInfoResponse } from '@/app/toolbox/ipinformation/page'
+import { getIpInfo, IpInfoResponse } from './api'
 
 export async function GET(
   req: NextRequest,

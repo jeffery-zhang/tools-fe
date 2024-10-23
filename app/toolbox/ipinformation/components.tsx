@@ -1,11 +1,11 @@
 'use client'
 
 import { FC, useRef, useState } from 'react'
+import { Loader2 } from 'lucide-react'
 
 import { Input } from '@/components/ui/input'
-import { Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { IpInfoDataType, IpInfoResponse } from './page'
+import { IpInfoDataType, IpInfoResponse } from '@/app/api/ipinfo/api'
 
 interface IInfoProps {
   result: IpInfoDataType
