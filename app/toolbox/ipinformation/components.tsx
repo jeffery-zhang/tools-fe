@@ -2,10 +2,10 @@
 
 import { FC, useRef, useState } from 'react'
 
-import { IpInfoDataType, IpInfoResponse } from '@/app/api/ipinfo/route'
 import { Input } from '@/components/ui/input'
 import { Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { IpInfoDataType, IpInfoResponse } from './page'
 
 interface IInfoProps {
   result: IpInfoDataType
