@@ -5,7 +5,7 @@ import { Loader2 } from 'lucide-react'
 
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { IpInfoDataType, IpInfoResponse } from '@/app/api/ipinfo/api'
+import { IpInfoDataType, IpInfoResponse } from '@/app/api/ipinfo/controller'
 
 interface IInfoProps {
   result: IpInfoDataType

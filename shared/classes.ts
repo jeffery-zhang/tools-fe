@@ -7,10 +7,10 @@ export interface IResponseJson<T = null> {
 
 export class ResponseJson<T> implements IResponseJson<T> {
   constructor(
-    public data: T | null,
-    public success: boolean = true,
-    public message: string = '',
-    public status: number = 200,
+    public readonly data: T | null,
+    public readonly success: boolean = true,
+    public readonly message: string = '',
+    public readonly status: number = 200,
   ) {}
 
   getData(): T | null {

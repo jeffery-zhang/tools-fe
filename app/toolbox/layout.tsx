@@ -1,4 +1,5 @@
 import { Aside } from '@/components/Aside'
+import { ToolTitle } from '@/components/ToolTitle'
 
 export default function DefaultLayout({
   children,
