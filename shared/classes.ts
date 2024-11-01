@@ -26,3 +26,12 @@ export class ResponseJson<T> implements IResponseJson<T> {
     return this.status
   }
 }
+
+export class ResponseError extends ResponseJson<null> {
+  constructor(
+    public readonly message: string,
+    public readonly status: number = 500,
+  ) {
+    super(null, false, message, status)
+  }
+}

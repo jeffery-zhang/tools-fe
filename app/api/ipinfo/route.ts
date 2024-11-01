@@ -32,7 +32,5 @@ export async function GET(
 
   const res = await getIpInfo(token!, ip)
 
-  console.log('in route ===>', res)
-
   return new NextResponse(JSON.stringify(res))
 }

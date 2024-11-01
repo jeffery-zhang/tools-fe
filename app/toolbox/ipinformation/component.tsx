@@ -6,6 +6,7 @@ import { Loader2 } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { IpInfoDataType, IpInfoResponse } from '@/app/api/ipinfo/controller'
+import { request } from '@/shared/requestClientSide'
 
 interface IInfoProps {
   result: IpInfoDataType
@@ -31,8 +32,7 @@ export const Sender: FC = () => {
 
   const requestTargetIpInfo = async (ip: string) => {
     setLoading(true)
-    const res = await fetch('/api/ipinfo?ip=' + ip)
-    const data: IpInfoResponse = await res.json()
+    const data = await request<IpInfoDataType>('/api/ipinfo?ip=' + ip)
 
     setResult(data.data)
     setLoading(false)

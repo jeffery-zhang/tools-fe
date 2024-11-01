@@ -5,13 +5,13 @@ import { useEffect, useState } from 'react'
 import { IpInfoDataType, IpInfoResponse } from '@/app/api/ipinfo/controller'
 import { Info, Sender } from './component'
 import { ToolTitle } from '@/components/ToolTitle'
+import { request } from '@/shared/requestClientSide'
 
 export default function Page() {
   const [result, setResult] = useState<IpInfoDataType | null>(null)
 
   const requestTargetIpInfo = async () => {
-    const res = await fetch('/api/ipinfo')
-    const data: IpInfoResponse = await res.json()
+    const data = await request<IpInfoDataType>('/api/ipinfo')
 
     setResult(data.data)
   }
